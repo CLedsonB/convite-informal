@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Ai dentro</title>
+</head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  a {
+    text-decoration: none;
+  }
+  .box {
+    font-size: 20px;
+    color: white;
+    height: 250px;
+    width: 350px;
+    border-radius: 10px;
+    background: #191919;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .conter-botao {
+    display : flex;
+    justify-content: space-around;
+    height: 50px;
+    width: 150px;
+  }
+  button {
+    height: 30px;
+    width: 50px;
+    background: #ffffff;
+    border-radius: 5px;
+    color: #0000aa;
+    font-weight: 600;
+  }
+</style>
+<body>
+  <div class="box">
+    <p>Vem com o bumbum hoje ?</p>
+    <div class="conter-botao">
+      <button>
+        <a href="">Sim</a>
+      </button>
+      <button id="no">Não</button>
+    </div>
+  </div>
+</body>
+<script>
+  let botao = document.getElementById('no');
+  let altura = window.innerHeight - 300;
+  let largura = window.innerWidth - 300;
+  
+  botao.addEventListener('mouseover', function() {
+    botao.style.position = "absolute";
+    botao.style.top = Math.random() * altura + "px";
+    botao.style.left = Math.random() * largura + "px";
+  })
+</script>
+</html>

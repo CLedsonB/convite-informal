@@ -40,27 +40,35 @@
     color: #0000aa;
     font-weight: 600;
   }
+  audio {
+    display: none;
+  }
 </style>
 <body>
   <div class="box">
     <p>Vem com o bumbum hoje ?</p>
     <div class="conter-botao">
-      <button>
+      <button onclick="document.getElementById('player').play()">
         <a href="">Sim</a>
       </button>
       <button id="no">Não</button>
     </div>
   </div>
+  <audio id="player" autoplay="autoplay" controls="controls">
+	  <source src="audio.m4a" type="audio/mp3" />
+	  seu navegador não suporta HTML5
+	</audio>
 </body>
 <script>
-  let botao = document.getElementById('no');
+  let botaoNao = document.getElementById('no');
+  var audio = document.getElementById('aiiii');
   let altura = window.innerHeight - 300;
   let largura = window.innerWidth - 300;
   
-  botao.addEventListener('mouseover', function() {
-    botao.style.position = "absolute";
-    botao.style.top = Math.random() * altura + "px";
-    botao.style.left = Math.random() * largura + "px";
+  botaoNao.addEventListener('mouseover', function() {
+    botaoNao.style.position = "absolute";
+    botaoNao.style.top = Math.random() * altura + "px";
+    botaoNao.style.left = Math.random() * largura + "px";
   })
 </script>
 </html>
